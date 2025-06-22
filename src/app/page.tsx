@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <div className="min-h-screen bg-white px-6 py-12">
       <header className="mb-12 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">Lidt om mig</h1>
+        <h1 className="text-4xl font-bold text-gray-800">Hvem er jeg?</h1>
       </header>
 
       <main className="max-w-3xl mx-auto flex flex-col space-y-8">
