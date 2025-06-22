@@ -7,7 +7,6 @@ export default function Header(){
 
           <div className="space-x-4 text-xl lg:flex-grow">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/aboutMe" >Om mig</NavLink>
             <NavLink href="/projects" >Projekter</NavLink>
             <NavLink href="/other" >Andet</NavLink>
           </div>

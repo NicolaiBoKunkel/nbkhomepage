@@ -1,5 +1,92 @@
-export default function Home() {
+import Image from 'next/image';
+import me from '/public/me.jpeg';
+
+export default function AboutMe() {
   return (
-      <h1>Home</h1>
+    <div className="min-h-screen bg-white px-6 py-12">
+      <header className="mb-12 text-center">
+        <h1 className="text-4xl font-bold text-gray-800">Lidt om mig</h1>
+      </header>
+
+      <main className="max-w-3xl mx-auto flex flex-col space-y-8">
+        
+        {/* About Me */}
+        <section className="bg-gray-100 p-6 rounded-2xl shadow">
+          <div className="flex flex-col items-center text-center space-y-4">
+            <div className="w-32 h-32 rounded-full overflow-hidden shadow-md">
+              <Image
+                src={me}
+                alt="Portrait"
+                priority
+                width={128}
+                height={128}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-800">Om mig</h2>
+            <p className="text-gray-700">
+              Jeg er en passioneret udvikler med interesse for moderne webteknologier og brugervenligt design.
+              Jeg nyder at bygge funktionelle og æstetiske løsninger.
+            </p>
+          </div>
+        </section>
+
+        {/* Education & Experience */}
+        <section className="bg-gray-100 p-6 rounded-2xl shadow">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800 text-center">Uddannelse & Erfaring</h2>
+          <ul className="space-y-4 text-gray-700">
+            
+            {/* Datamatiker */}
+            <li>
+              <p className="font-medium">Datamatikeruddannelsen – Zealand - Sjællands Erhvervsakademi i Roskilde (2022–2025)</p>
+              <div className="mt-2 ml-4">
+                <p className="font-semibold">Karakterer:</p>
+                <ul className="list-disc list-inside text-sm space-y-1">
+                  <li>14-06-2023 – Førsteårsprøven: 10 (B), 60 ECTS</li>
+                  <li>12-01-2024 – Systemudviklingsprøven: 7 (C), 10 ECTS</li>
+                  <li>17-01-2024 – Programmeringsprøven: 10 (B), 20 ECTS</li>
+                  <li>19-06-2024 – Valgfagsprøven: 7 (C), 30 ECTS</li>
+                  <li>07-11-2024 – Praktikprøven: 12 (A), 15 ECTS</li>
+                  <li>27-01-2025 – Afsluttende eksamensprojekt: 10 (B), 15 ECTS</li>
+                  <li className="font-medium mt-1">Samlet ECTS: 150</li>
+                </ul>
+              </div>
+            </li>
+
+            {/* Internship */}
+            <li>
+              <p className="font-medium">Datamatiker-praktik som frontend-udvikler hos Velliv, Pension & Livsforsikring (2024)</p>
+            </li>
+
+            {/* Top-up */}
+            <li>
+              <p className="font-medium">Professionsbachelor i Softwareudvikling – KEA - Københavns Erhvervsakademi (2025–2026)</p>
+                            <div className="mt-2 ml-4">
+                <p className="font-semibold">Karakterer:</p>
+                <ul className="list-disc list-inside text-sm space-y-1">
+                  <li>04-06-2025 – Systemintegration: 7 (C), 10 ECTS</li>
+                  <li>10-06-2025 – Udvikling af store systemer: 12 (A), 10 ECTS</li>
+                  <li>19-06-2025 – Full-Stack Web Development: 7 (C), 10 ECTS</li>
+                  <li className="font-medium mt-1">Nuværende ECTS: 30</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        {/* Contact */}
+        <section className="bg-gray-100 p-4 rounded-2xl shadow text-center">
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Kontakt</h2>
+          <p className="text-gray-700">
+            Email: <a href="mailto:nicolai@kunkel.dk" className="text-blue-600 underline">nicolai@kunkel.dk</a>
+          </p>
+          <p className="text-gray-700">
+            LinkedIn: <a href="https://www.linkedin.com/in/nicolai-bo-kunkel-411334179/" className="text-blue-600 underline">
+              https://www.linkedin.com/in/nicolai-bo-kunkel-411334179/
+            </a>
+          </p>
+        </section>
+      </main>
+    </div>
   );
 }
