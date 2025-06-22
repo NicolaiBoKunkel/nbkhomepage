@@ -25,8 +25,9 @@ export default function AboutMe() {
             </div>
             <h2 className="text-2xl font-semibold text-gray-800">Om mig</h2>
             <p className="text-gray-700">
-              Jeg er en passioneret udvikler med interesse for moderne webteknologier og brugervenligt design.
-              Jeg nyder at bygge funktionelle og æstetiske løsninger.
+              Mit navn er Nicolai Bo Kunkel. Jeg er 25 år gammel og nyuddannet datamatiker, samt studerende på Københavns Erhvervsakademi, hvor jeg snart starter 2. semester af min overbygende professionsbachelor i softwareudvikling.
+            </p>
+            <p className="text-gray-700">
             </p>
           </div>
         </section>
@@ -45,7 +46,7 @@ export default function AboutMe() {
                   <li>14-06-2023 – Førsteårsprøven: 10 (B), 60 ECTS</li>
                   <li>12-01-2024 – Systemudviklingsprøven: 7 (C), 10 ECTS</li>
                   <li>17-01-2024 – Programmeringsprøven: 10 (B), 20 ECTS</li>
-                  <li>19-06-2024 – Valgfagsprøven: 7 (C), 30 ECTS</li>
+                  <li>19-06-2024 – Valgfagsprøven (Webudvikling): 7 (C), 30 ECTS</li>
                   <li>07-11-2024 – Praktikprøven: 12 (A), 15 ECTS</li>
                   <li>27-01-2025 – Afsluttende eksamensprojekt: 10 (B), 15 ECTS</li>
                   <li className="font-medium mt-1">Samlet ECTS: 150</li>
@@ -69,6 +70,43 @@ export default function AboutMe() {
                   <li>19-06-2025 – Full-Stack Web Development: 7 (C), 10 ECTS</li>
                   <li className="font-medium mt-1">Nuværende ECTS: 30</li>
                 </ul>
+              </div>
+            </li>
+
+            <li>
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Teknologier & Erfaring</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {/* Most */}
+                  <div>
+                    <h4 className="text-md font-semibold text-gray-600 mb-1">📗 Størst erfaring</h4>
+                    <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                      <li>JavaScript & TypeScript</li>
+                      <li>React & Next.js</li>
+                      <li>Node.js & Express</li>
+                      <li>RESTful API'er</li>
+                      <li>HTML & CSS</li>
+                      <li>Scrum & Agile-metodologier</li>
+                    </ul>
+                  </div>
+
+                  {/* Moderate */}
+                  <div>
+                    <h4 className="text-md font-semibold text-gray-600 mb-1">📙 Moderat erfaring</h4>
+                    <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                      <li>C#</li>
+                      <li>GraphQL</li>
+                    </ul>
+                  </div>
+
+                  {/* Least */}
+                  <div>
+                    <h4 className="text-md font-semibold text-gray-600 mb-1">📘 Begynder </h4>
+                    <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                      <li>Python</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
