@@ -6,7 +6,7 @@ export default function Header(){
         <div className="space-x-4 w-full block lg:flex lg:items-center lg:w-auto">
 
           <div className="space-x-4 text-xl lg:flex-grow">
-            <NavLink href="/">Home</NavLink>
+            <NavLink href="/">Forside</NavLink>
             <NavLink href="/projects" >Projekter</NavLink>
             <NavLink href="/other" >Andet</NavLink>
           </div>
