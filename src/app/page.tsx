@@ -82,9 +82,9 @@ export default function AboutMe() {
                     <h4 className="text-md font-semibold text-gray-600 mb-1">📗 Størst erfaring</h4>
                     <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
                       <li>JavaScript & TypeScript</li>
-                      <li>React & Next.js</li>
-                      <li>Node.js & Express</li>
-                      <li>RESTful API'er</li>
+                      <li>React</li>
+                      <li>Next.js</li>
+                      <li>REST API</li>
                       <li>HTML & CSS</li>
                       <li>Scrum & Agile-metodologier</li>
                     </ul>
@@ -96,6 +96,8 @@ export default function AboutMe() {
                     <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
                       <li>C#</li>
                       <li>GraphQL</li>
+                      <li>Docker</li>
+                      <li>Docker Compose</li>
                     </ul>
                   </div>
 
@@ -104,6 +106,8 @@ export default function AboutMe() {
                     <h4 className="text-md font-semibold text-gray-600 mb-1">📘 Begynder </h4>
                     <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
                       <li>Python</li>
+                      <li>Kubernetes</li>
+                      <li>React Flow</li>
                     </ul>
                   </div>
                 </div>
