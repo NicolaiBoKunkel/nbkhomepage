@@ -87,6 +87,9 @@ export default function AboutMe() {
                       <li>REST API</li>
                       <li>HTML & CSS</li>
                       <li>Scrum & Agile-metodologier</li>
+                      <li>Git & GitHub</li>
+                      <li>Node.js</li>
+                      <li>Tailwind CSS</li>
                     </ul>
                   </div>
 
@@ -94,10 +97,11 @@ export default function AboutMe() {
                   <div>
                     <h4 className="text-md font-semibold text-gray-600 mb-1">📙 Moderat erfaring</h4>
                     <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                      <li>C#</li>
+                      <li>C# & .NET</li>
                       <li>GraphQL</li>
-                      <li>Docker</li>
-                      <li>Docker Compose</li>
+                      <li>DevOps (Docker, CI/CD, GitHub Actions)</li>
+                      <li>PostgreSQL</li>
+                      <li>MongoDB</li>
                     </ul>
                   </div>
 
@@ -108,6 +112,9 @@ export default function AboutMe() {
                       <li>Python</li>
                       <li>Kubernetes</li>
                       <li>React Flow</li>
+                      <li>Monitoring & Metrics (Prometheus, Grafana)</li>
+                      <li>Firebase</li>
+                      <li>RabbitMQ</li>
                     </ul>
                   </div>
                 </div>
