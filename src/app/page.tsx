@@ -62,7 +62,7 @@ export default function AboutMe() {
             {/* Top-up */}
             <li>
               <p className="font-medium">Professionsbachelor i Softwareudvikling – KEA - Københavns Erhvervsakademi (2025–2026)</p>
-                            <div className="mt-2 ml-4">
+              <div className="mt-2 ml-4">
                 <p className="font-semibold">Karakterer:</p>
                 <ul className="list-disc list-inside text-sm space-y-1">
                   <li>04-06-2025 – Systemintegration: 7 (C), 10 ECTS</li>
@@ -76,6 +76,7 @@ export default function AboutMe() {
             <li>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Teknologier & Erfaring</h3>
+                <p className="font-medium">Nedenunder har jeg angivet de teknologier og relevante emner, hvor jeg har mest erfaring og kendskab. </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {/* Most */}
                   <div>
