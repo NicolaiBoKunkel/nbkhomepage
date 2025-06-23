@@ -89,6 +89,7 @@ export default function AboutMe() {
                       <li>Scrum & Agile-metodologier</li>
                       <li>Git & GitHub</li>
                       <li>Node.js</li>
+                      <li>Express.js</li>
                       <li>Tailwind CSS</li>
                     </ul>
                   </div>
@@ -102,6 +103,7 @@ export default function AboutMe() {
                       <li>DevOps (Docker, CI/CD, GitHub Actions)</li>
                       <li>PostgreSQL</li>
                       <li>MongoDB</li>
+                      <li>Testing (JEST, Cypress & Selenium)</li>
                     </ul>
                   </div>
 
@@ -115,6 +117,7 @@ export default function AboutMe() {
                       <li>Monitoring & Metrics (Prometheus, Grafana)</li>
                       <li>Firebase</li>
                       <li>RabbitMQ</li>
+                      <li>Redis</li>
                     </ul>
                   </div>
                 </div>
