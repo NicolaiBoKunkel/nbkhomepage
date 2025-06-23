@@ -19,7 +19,8 @@ export default async function ProjectsPage() {
 
   return (
     <div className="min-h-screen px-6 py-12 bg-white text-gray-800">
-      <h1 className="text-3xl font-bold mb-8 text-center">Udvalgte Projekter</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center">Udvalgte Projekter</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center text-red-600">Bemærk: Siden er stadig under konstruktion</h1>
         <p className="text-center mb-6 text-gray-600">
             Denne side bruges til at dele projekter, som jeg har udvalgt for at fremvise mine færdigheder og erfaringer.
             Projekterne er en blanding af personlige projekter og eksamensprojekter, som både har været implementeret individuelt og i grupper.
