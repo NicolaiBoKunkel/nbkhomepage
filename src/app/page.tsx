@@ -76,7 +76,9 @@ export default function AboutMe() {
             <li>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Teknologier & Erfaring</h3>
-                <p className="font-medium">Nedenunder har jeg angivet de teknologier og relevante emner, hvor jeg har mest erfaring og kendskab. </p>
+                <p>Nedenunder har jeg angivet de teknologier og relevante emner, hvor jeg har mest erfaring og kendskab. 
+                  Listerne vil løbende blive opdateret, i takt med at jeg tilegner mig ny viden og erfaring, og derpå må reevaluere mine færdigheder, på baggrund af hvad jeg samlet har brugt mest tid på.
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {/* Most */}
                   <div>
@@ -119,6 +121,7 @@ export default function AboutMe() {
                       <li>Firebase</li>
                       <li>RabbitMQ</li>
                       <li>Redis</li>
+                      <li>Microsoft Azure</li>
                     </ul>
                   </div>
                 </div>
