@@ -25,7 +25,7 @@ export default function AboutMe() {
             </div>
             <h2 className="text-2xl font-semibold text-gray-800">Om mig</h2>
             <p className="text-gray-700">
-              Mit navn er Nicolai Bo Kunkel. Jeg er 25 år gammel og nyuddannet datamatiker, samt studerende på Københavns Erhvervsakademi, hvor jeg snart starter 2. semester af min overbygende professionsbachelor i softwareudvikling.
+              Jeg hedder Nicolai Bo Kunkel, er 25 år gammel, nyuddannet datamatiker og læser videre på 2. semester af min overbygningsprofessionsbachelor i softwareudvikling på Københavns Erhvervsakademi.
             </p>
             <p className="text-gray-700">
             </p>
