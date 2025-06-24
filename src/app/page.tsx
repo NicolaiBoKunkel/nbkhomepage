@@ -132,7 +132,7 @@ export default function AboutMe() {
 
         {/* Contact */}
         <section className="bg-gray-100 p-4 rounded-2xl shadow text-center">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Kontakt</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">kontaktmuligheder</h2>
           <p className="text-gray-700">
             Email: <a href="mailto:nicolai@kunkel.dk" className="text-blue-600 underline">nicolai@kunkel.dk</a>
           </p>
