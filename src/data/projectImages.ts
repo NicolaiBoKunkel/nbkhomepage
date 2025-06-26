@@ -34,4 +34,18 @@ export const projectImages: Record<
         caption: "SEO-diagram",
         }
     ],
+    "Flowmaster2": [
+        {
+        src: "/images/flowmaster1.png",
+        caption: "Redigering af flow",
+        },
+        {
+        src: "/images/flowmaster2.png",
+        caption: "Visualisering af flow",
+        },
+        {
+        src: "/images/flowmaster3.png",
+        caption: "Afprøvning af flow",
+        }
+    ]
 };
