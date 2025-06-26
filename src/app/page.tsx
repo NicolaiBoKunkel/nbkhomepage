@@ -130,18 +130,33 @@ export default function AboutMe() {
           </ul>
         </section>
 
-        {/* Contact */}
-        <section className="bg-gray-100 p-4 rounded-2xl shadow text-center">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">kontaktmuligheder</h2>
-          <p className="text-gray-700">
-            Email: <a href="mailto:nicolai@kunkel.dk" className="text-blue-600 underline">nicolai@kunkel.dk</a>
-          </p>
-          <p className="text-gray-700">
-            LinkedIn: <a href="https://www.linkedin.com/in/nicolai-bo-kunkel-411334179/" className="text-blue-600 underline">
-              https://www.linkedin.com/in/nicolai-bo-kunkel-411334179/
-            </a>
-          </p>
-        </section>
+    {/* Contact */}
+    <section className="bg-gray-100 p-6 rounded-2xl shadow-lg text-center space-y-4">
+      <h2 className="text-2xl font-bold text-gray-800">Lad os komme i kontakt</h2>
+      <p className="text-gray-600 text-base max-w-md mx-auto">
+        Du er altid velkommen til at række ud, hvis du har spørgsmål, projekter eller bare vil netværke.
+      </p>
+      <div className="space-y-2">
+        <p className="text-gray-700">
+          Email:{" "}
+          <a href="mailto:nicolai@kunkel.dk" className="text-blue-600 underline">
+            nicolai@kunkel.dk
+          </a>
+        </p>
+        <p className="text-gray-700">
+          LinkedIn:{" "}
+          <a
+            href="https://www.linkedin.com/in/nicolai-bo-kunkel-411334179/"
+            className="text-blue-600 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nicolai Bo Kunkel
+          </a>
+        </p>
+      </div>
+    </section>
+
       </main>
     </div>
   );

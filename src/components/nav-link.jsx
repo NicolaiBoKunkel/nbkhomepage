@@ -1,22 +1,22 @@
 "use client";
 
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import classes from "./nav-link.module.css"
+import classes from "./nav-link.module.css";
 
+export default function NavLink({ href, children }) {
+  const path = usePathname();
 
-export default function NavLink({href, children}) {
-    const path = usePathname();
+  const isActive =
+    href === "/" ? path === "/" : path.startsWith(href);
 
-
-    return (
-        <Link 
-        href={href}
-        className={path.startsWith(href) ? `${classes.link} ${classes.active}` : classes.link}
-        >
-            {children}
-        </Link>
-    );
+  return (
+    <Link
+      href={href}
+      className={isActive ? `${classes.link} ${classes.active}` : classes.link}
+    >
+      {children}
+    </Link>
+  );
 }
