@@ -43,12 +43,12 @@ export default function AboutMe() {
               <div className="mt-2 ml-4">
                 <p className="font-semibold">Karakterer:</p>
                 <ul className="list-disc list-inside text-sm space-y-1">
-                  <li>14-06-2023 – Førsteårsprøven: 10, 60 ECTS</li>
-                  <li>12-01-2024 – Systemudviklingsprøven: 7, 10 ECTS</li>
-                  <li>17-01-2024 – Programmeringsprøven: 10, 20 ECTS</li>
-                  <li>19-06-2024 – Valgfagsprøven (Webudvikling): 7, 30 ECTS</li>
-                  <li>07-11-2024 – Praktikprøven: 12, 15 ECTS</li>
-                  <li>27-01-2025 – Afsluttende eksamensprojekt: 10, 15 ECTS</li>
+                  <li>14-06-2023 – Førsteårsprøven: 10, (60 ECTS)</li>
+                  <li>12-01-2024 – Systemudviklingsprøven: 7, (10 ECTS)</li>
+                  <li>17-01-2024 – Programmeringsprøven: 10, (20 ECTS)</li>
+                  <li>19-06-2024 – Valgfagsprøven (Webudvikling): 7, (30 ECTS)</li>
+                  <li>07-11-2024 – Praktikprøven: 12, (15 ECTS)</li>
+                  <li>27-01-2025 – Afsluttende eksamensprojekt: 10, (15 ECTS)</li>
                   <li className="font-medium mt-1">Samlet ECTS: 150</li>
                 </ul>
               </div>
@@ -65,9 +65,9 @@ export default function AboutMe() {
               <div className="mt-2 ml-4">
                 <p className="font-semibold">Karakterer:</p>
                 <ul className="list-disc list-inside text-sm space-y-1">
-                  <li>04-06-2025 – Systemintegration: 7, 10 ECTS</li>
-                  <li>10-06-2025 – Udvikling af store systemer: 12, 10 ECTS</li>
-                  <li>19-06-2025 – Full-Stack Web Development: 7, 10 ECTS</li>
+                  <li>04-06-2025 – Systemintegration: 7, (10 ECTS)</li>
+                  <li>10-06-2025 – Udvikling af store systemer: 12, (10 ECTS)</li>
+                  <li>19-06-2025 – Full-Stack Web Development: 7, (10 ECTS)</li>
                   <li className="font-medium mt-1">Nuværende ECTS: 30</li>
                 </ul>
               </div>
