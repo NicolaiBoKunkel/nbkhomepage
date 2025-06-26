@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import { fetchGitHubRepos } from '@/lib/github';
+import { projectImages } from '@/data/projectImages'; // <-- import image data
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -24,6 +26,8 @@ export default async function ProjectDetailPage({ params }: Props) {
   const repo = repos.find((r) => r.name === params.slug);
 
   if (!repo) return notFound();
+
+  const images = projectImages[repo.name] || [];
 
   return (
     <div className="min-h-screen px-6 py-12 bg-white text-gray-800 max-w-3xl mx-auto">
@@ -51,9 +55,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       <div className="space-y-2">
         {repo.language && <p><strong>Sprog:</strong> {repo.language}</p>}
         {repo.topics.length > 0 && (
-          <p>
-            <strong>GitHub Topics:</strong> {repo.topics.join(', ')}
-          </p>
+          <p><strong>GitHub Topics:</strong> {repo.topics.join(', ')}</p>
         )}
         {repo.homepage && (
           <p>
@@ -71,10 +73,29 @@ export default async function ProjectDetailPage({ params }: Props) {
         </p>
       </div>
 
-      {/* Future area for images, diagrams, etc. */}
-      <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-2">Screenshots / Diagrammer</h2>
-        <p className="text-sm text-gray-500">(Kommer snart…)</p>
+      {/* Screenshots / diagrams section */}
+      <div className="mt-10">
+        <h2 className="text-xl font-semibold mb-4">Screenshots / Diagrammer</h2>
+        {images.length > 0 ? (
+          <div className="grid gap-4">
+          {images.map(({ src, caption }, index) => (
+            <div key={index} className="border rounded overflow-hidden mb-6 max-w-xl mx-auto">
+              <Image
+                src={src}
+                alt={`Screenshot ${index + 1} of ${repo.name}`}
+                width={640}
+                height={480}
+                className="w-full h-auto"
+              />
+              {caption && (
+                <p className="text-sm text-gray-600 italic mt-1 px-2 pb-2 text-center">{caption}</p>
+              )}
+            </div>
+          ))}
+          </div>
+        ) : (
+          <p className="text-sm text-gray-500">Ingen billeder tilgængelige.</p>
+        )}
       </div>
     </div>
   );
