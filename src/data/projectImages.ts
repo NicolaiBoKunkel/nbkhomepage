@@ -29,10 +29,6 @@ export const projectImages: Record<
         src: "/images/moviedb.architecture.png",
         caption: "Systemarkitektur",
         },
-        {
-        src: "/images/moviedb.seochart.png",
-        caption: "SEO-diagram",
-        }
     ],
     "Flowmaster2": [
         {

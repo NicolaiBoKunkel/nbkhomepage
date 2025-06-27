@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { fetchGitHubRepos } from '@/lib/github';
-import { projectImages } from '@/data/projectImages'; // <-- import image data
+import { projectImages } from '@/data/projectImages';
+import { projectDescriptions } from '@/data/projectDescription';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -28,6 +29,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   if (!repo) return notFound();
 
   const images = projectImages[repo.name] || [];
+  const longDescription = projectDescriptions[repo.name]?.long;
 
   return (
     <div className="min-h-screen px-6 py-12 bg-white text-gray-800 max-w-3xl mx-auto">
@@ -37,7 +39,9 @@ export default async function ProjectDetailPage({ params }: Props) {
         Opdateret: {new Date(repo.updatedAt).toLocaleDateString('da-DK')}
       </p>
 
-      <p className="mb-4 text-gray-700">{repo.description || 'Ingen beskrivelse.'}</p>
+      <p className="mb-4 text-gray-700">
+        {longDescription || repo.description || 'Ingen beskrivelse.'}
+      </p>
 
       {repo.tags.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-4">
@@ -78,20 +82,22 @@ export default async function ProjectDetailPage({ params }: Props) {
         <h2 className="text-xl font-semibold mb-4">Screenshots / Diagrammer</h2>
         {images.length > 0 ? (
           <div className="grid gap-4">
-          {images.map(({ src, caption }, index) => (
-            <div key={index} className="border rounded overflow-hidden mb-6 max-w-xl mx-auto">
-              <Image
-                src={src}
-                alt={`Screenshot ${index + 1} of ${repo.name}`}
-                width={640}
-                height={480}
-                className="w-full h-auto"
-              />
-              {caption && (
-                <p className="text-sm text-gray-600 italic mt-1 px-2 pb-2 text-center">{caption}</p>
-              )}
-            </div>
-          ))}
+            {images.map(({ src, caption }, index) => (
+              <div key={index} className="border rounded overflow-hidden mb-6 max-w-xl mx-auto">
+                <Image
+                  src={src}
+                  alt={`Screenshot ${index + 1} of ${repo.name}`}
+                  width={640}
+                  height={480}
+                  className="w-full h-auto"
+                />
+                {caption && (
+                  <p className="text-sm text-gray-600 italic mt-1 px-2 pb-2 text-center">
+                    {caption}
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
         ) : (
           <p className="text-sm text-gray-500">Ingen billeder tilgængelige.</p>

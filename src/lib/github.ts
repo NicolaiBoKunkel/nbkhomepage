@@ -1,7 +1,7 @@
 // lib/github.ts
 
 import { projectTags } from '@/data/projectTags';
-import { projectDescription } from '@/data/projectDescription';
+import { projectDescriptions } from '@/data/projectDescription';
 
 const GITHUB_API_URL = 'https://api.github.com';
 
@@ -31,7 +31,7 @@ export async function fetchGitHubRepos() {
       name: repo.name,
       fullName: repo.full_name,
       htmlUrl: repo.html_url,
-      description: projectDescription[repo.name] || repo.description,
+      description: projectDescriptions[repo.name]?.short || repo.description,
       language: repo.language,
       topics: repo.topics,
       updatedAt: repo.updated_at,
