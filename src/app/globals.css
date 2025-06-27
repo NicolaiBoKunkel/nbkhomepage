@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply text-gray-800 bg-white;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  ) rgb(var(--background-start-rgb));
+}
+
+html.dark body {
+  @apply text-white bg-black;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(0 0 0)
+  ) rgb(0 0 0);
+}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -14,16 +33,6 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
