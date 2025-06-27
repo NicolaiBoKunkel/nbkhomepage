@@ -4,19 +4,13 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import car48 from '/public/car48.png';
 
-/**
- * 
- * Component that renders a moving car image across the screen. 
- */
-
 export default function MovingCar() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(100);
   const [direction, setDirection] = useState<'left' | 'right'>('right');
 
   useEffect(() => {
-    // Initialize Y-position and direction randomly
-    const maxY = window.innerHeight - 50; // Avoid bottom cutoff - readjust later
+    const maxY = window.innerHeight - 50;
     const startY = Math.random() * maxY;
     const initialDirection = Math.random() > 0.5 ? 'right' : 'left';
 
@@ -29,11 +23,8 @@ export default function MovingCar() {
       pos += initialDirection === 'right' ? 2 : -2;
       setX(pos);
 
-      const offScreenRight = pos > window.innerWidth + 100;
-      const offScreenLeft = pos < -100;
-
-      if (offScreenRight || offScreenLeft) {
-        // Restart movement in a new direction and Y position
+      const offScreen = pos > window.innerWidth + 100 || pos < -100;
+      if (offScreen) {
         const newDirection = Math.random() > 0.5 ? 'right' : 'left';
         const newY = Math.random() * (window.innerHeight - 50);
 
@@ -46,17 +37,45 @@ export default function MovingCar() {
     return () => clearInterval(interval);
   }, []);
 
+  const isRight = direction === 'right';
+
   return (
     <div
-      className="absolute z-0 pointer-events-none"
+      className="absolute z-10 pointer-events-none"
       style={{
         top: y,
         left: x,
-        transition: 'transform 0.2s linear',
-        transform: direction === 'left' ? 'scaleX(-1)' : 'scaleX(1)',
+        transition: 'left 0.02s linear',
       }}
     >
-      <Image src={car48} alt="Car" width={24} height={24} />
+      <div className="relative w-fit h-fit">
+        {/* Headlight beam */}
+        <div
+          className="hidden dark:block absolute z-0"
+          style={{
+            top: '50%',
+            left: isRight ? '100%' : 'auto',
+            right: isRight ? 'auto' : '100%',
+            transform: `translateY(-50%) rotate(${isRight ? '0' : '180'}deg)`,
+            width: '120px',
+            height: '40px',
+            background: 'linear-gradient(to right, rgba(255,255,255,0.5), transparent)',
+            clipPath: 'polygon(0% 40%, 100% 0%, 100% 100%, 0% 60%)',
+            filter: 'blur(4px)',
+            opacity: 0.8,
+            mixBlendMode: 'screen',
+          }}
+        />
+
+        {/* Car image, flipped only if moving left */}
+        <Image
+          src={car48}
+          alt="Car"
+          width={24}
+          height={24}
+          className={`relative z-10 ${!isRight ? 'scale-x-[-1]' : ''}`}
+        />
+      </div>
     </div>
   );
 }
