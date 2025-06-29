@@ -142,7 +142,7 @@ export default function NotFound() {
             width: '80px',
             height: '80px',
             left: explosion.x - 40,
-            top: explosion.y - 40,
+            top: explosion.y - 150,
             zIndex: 45,
             animation: 'explode 0.4s ease-out forwards',
           }}
@@ -168,6 +168,8 @@ export default function NotFound() {
       <Link
         href="/"
         className="mt-4 inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded transition"
+        onMouseEnter={e => (e.currentTarget.textContent = 'Move along')}
+        onMouseLeave={e => (e.currentTarget.textContent = 'Gå til forsiden')}
       >
         Gå til forsiden
       </Link>

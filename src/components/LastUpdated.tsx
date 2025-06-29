@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function LastUpdated() {
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
@@ -27,7 +28,10 @@ export default function LastUpdated() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 bg-gray-100 text-sm text-gray-600 px-4 py-2 rounded-lg shadow-md">
-      <p>Sidst opdateret: {updatedAt}</p>
+      <Link
+        href="/not-found.tsx">
+                <p>Sidst opdateret: {updatedAt}</p>
+      </Link>
     </div>
   );
 }
