@@ -11,6 +11,8 @@ export default function MovingCar() {
   const [velocity, setVelocity] = useState(0);
   const keysPressed = useRef<{ [key: string]: boolean }>({});
   const [screen, setScreen] = useState({ width: 0, height: 0 });
+  const [reverseMode, setReverseMode] = useState(false);
+  const lastSKeyPressTime = useRef<number | null>(null);
 
   useEffect(() => {
     const updateScreen = () => {
@@ -23,11 +25,24 @@ export default function MovingCar() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      keysPressed.current[e.key.toLowerCase()] = true;
+      const key = e.key.toLowerCase();
+      keysPressed.current[key] = true;
+
+      if (key === 's') {
+        const now = Date.now();
+        if (lastSKeyPressTime.current && now - lastSKeyPressTime.current < 300) {
+          setReverseMode(true);
+        }
+        lastSKeyPressTime.current = now;
+      }
     };
 
     const handleKeyUp = (e: KeyboardEvent) => {
-      keysPressed.current[e.key.toLowerCase()] = false;
+      const key = e.key.toLowerCase();
+      keysPressed.current[key] = false;
+      if (key === 's') {
+        lastSKeyPressTime.current = null;
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -37,10 +52,23 @@ export default function MovingCar() {
       let newAngle = angle;
       let newVelocity = velocity;
 
-      if (keysPressed.current['a']) newAngle -= 2;
-      if (keysPressed.current['d']) newAngle += 2;
-      if (keysPressed.current['w']) newVelocity = Math.min(5, newVelocity + 0.1);
-      if (keysPressed.current['s']) newVelocity = Math.max(-3, newVelocity - 0.1);
+      // Only allow turning if moving
+      if (velocity !== 0) {
+        if (keysPressed.current['a']) newAngle -= 2;
+        if (keysPressed.current['d']) newAngle += 2;
+      }
+
+      // Accelerate/brake/reverse
+      if (keysPressed.current['w']) {
+        newVelocity = Math.min(5, newVelocity + 0.1);
+        setReverseMode(false);
+      } else if (keysPressed.current['s']) {
+        if (reverseMode) {
+          newVelocity = Math.max(-3, newVelocity - 0.1);
+        } else if (newVelocity > 0) {
+          newVelocity = Math.max(0, newVelocity - 0.2);
+        }
+      }
 
       newVelocity *= 0.98;
 
@@ -48,7 +76,7 @@ export default function MovingCar() {
       let newX = x + Math.cos(rad) * newVelocity;
       let newY = y + Math.sin(rad) * newVelocity;
 
-      // Wrap around screen edges
+      // Wrap around edges
       if (newX < 0) newX = screen.width;
       if (newX > screen.width) newX = 0;
       if (newY < 0) newY = screen.height;
@@ -65,8 +93,9 @@ export default function MovingCar() {
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
     };
-  }, [angle, velocity, x, y, screen]);
+  }, [angle, velocity, x, y, screen, reverseMode]);
 
+  const isBraking = keysPressed.current['s'] && velocity > 0 && !reverseMode;
   const isReversing = velocity < -0.1;
 
   return (
@@ -96,6 +125,40 @@ export default function MovingCar() {
           }}
         />
 
+        {/* Tail lights */}
+        <div
+          className="hidden dark:block absolute z-0"
+          style={{
+            top: '50%',
+            right: '100%',
+            transform: 'translateY(-50%)',
+            width: '16px',
+            height: '20px',
+            background: 'rgba(255, 0, 0, 0.3)',
+            borderRadius: '4px',
+            filter: 'blur(2px)',
+          }}
+        />
+
+        {/* Brake lights */}
+        {isBraking && (
+          <div
+            className="hidden dark:block absolute z-0"
+            style={{
+              top: '50%',
+              right: '100%',
+              transform: 'translateY(-50%)',
+              width: '30px',
+              height: '20px',
+              background: 'linear-gradient(to left, rgba(255, 0, 0, 0.7), transparent)',
+              clipPath: 'polygon(100% 40%, 0% 0%, 0% 100%, 100% 60%)',
+              filter: 'blur(3px)',
+              opacity: 0.8,
+              mixBlendMode: 'screen',
+            }}
+          />
+        )}
+
         {/* Reverse lights */}
         {isReversing && (
           <div
@@ -104,17 +167,16 @@ export default function MovingCar() {
               top: '50%',
               right: '100%',
               transform: 'translateY(-50%)',
-              width: '80px',
+              width: '20px',
               height: '30px',
-              background: 'linear-gradient(to left, rgba(255, 50, 50, 0.5), transparent)',
+              background: 'linear-gradient(to left, rgba(255, 255, 255, 0.6), transparent)',
               clipPath: 'polygon(100% 40%, 0% 0%, 0% 100%, 100% 60%)',
               filter: 'blur(4px)',
-              opacity: 0.7,
+              opacity: 0.6,
               mixBlendMode: 'screen',
             }}
           />
         )}
-
 
         <Image
           src={car48}

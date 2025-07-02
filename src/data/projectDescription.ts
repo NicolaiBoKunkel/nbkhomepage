@@ -6,11 +6,11 @@ export const projectDescriptions: Record<
 > = {
   'e-commerce-project': {
     short: 'E-commerce projekt som er bygget efter en microservices arkitektur.',
-    long: 'E-commerce projekt som er bygget efter en microservices arkitektur. Projektet består af 4 microservices med egne databaser, en API gateway og en frontend som er bygget med Next.js. RabbitMQ er brugt til asynkron kommunikation mellem microservices. Alle microservices er orkestreret med Docker og Kubernetes, og deployet på Docker Hub.',
+    long: 'E-commerce projekt som er bygget efter en microservices arkitektur. Projektet består af 4 microservices med egne databaser, en API gateway og en frontend som er bygget med Next.js. RabbitMQ er brugt til asynkron kommunikation mellem microservices. Alle microservices er orkestreret med Docker og Kubernetes, og deployet på Docker Hub. Projektet kan pt. kun køres lokalt med Docker Desktop.',
   },
   'Flowmaster2': {
-    short: 'Projekt til opsættelse af brugerdefinerede og interaktive flowcharts.',
-    long: 'Projekt til opsættelse af brugerdefinerede og interaktive flowcharts. Projectet er bygget med Next.js, React Flow, og hostes på Vercel.',
+    short: 'Gruppeprojekt til opsættelse af brugerdefinerede og interaktive flowcharts.',
+    long: 'Gruppeprojekt til opsættelse af brugerdefinerede og interaktive flowcharts. Projectet er bygget med Next.js, React Flow, og hostes på Vercel.',
   },
   'nbkhomepage': {
     short: 'Dette projekt udgør min udviklerportfolio som du befinder dig på nu.',
