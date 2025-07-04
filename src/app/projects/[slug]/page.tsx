@@ -18,11 +18,11 @@ type Repo = {
   tags: string[];
 };
 
-type Props = {
+export default async function ProjectDetailPage({
+  params,
+}: {
   params: { slug: string };
-};
-
-export default async function ProjectDetailPage({ params }: Props) {
+}) {
   const repos: Repo[] = await fetchGitHubRepos();
   const repo = repos.find((r) => r.name === params.slug);
 
