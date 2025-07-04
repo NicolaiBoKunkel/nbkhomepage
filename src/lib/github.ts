@@ -1,5 +1,3 @@
-// lib/github.ts
-
 import { projectTags } from '@/data/projectTags';
 import { projectDescriptions } from '@/data/projectDescription';
 

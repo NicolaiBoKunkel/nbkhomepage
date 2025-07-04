@@ -1,5 +1,3 @@
-// src/data/projectImages.ts
-
 export const projectImages: Record<
   string,
   { src: string; caption?: string }[]

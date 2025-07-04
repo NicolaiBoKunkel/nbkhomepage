@@ -1,7 +1,7 @@
 'use client';
 
 import NavLink from "./nav-link";
-import ThemeToggle from "./ThemeToggle"; // <-- Import the toggle
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (

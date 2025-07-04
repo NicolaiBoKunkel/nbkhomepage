@@ -1,5 +1,3 @@
-// src/data/projectDescription.ts
-
 export const projectDescriptions: Record<
   string,
   { short: string; long: string }
