@@ -1,9 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useLanguage } from './LanguageProvider';
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark' | null>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
@@ -30,7 +32,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       className="text-white bg-blue-600 dark:bg-blue-800 hover:bg-blue-700 dark:hover:bg-blue-900 px-3 py-1 rounded transition text-sm"
     >
-      {theme === 'light' ? '🌙 Mørk tilstand' : '☀️ Lys tilstand'}
+      {theme === 'light' ? t('theme.dark') : t('theme.light')}
     </button>
   );
 }

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import LastUpdated from "@/components/LastUpdated";
 import { Analytics } from '@vercel/analytics/next';
+import { LanguageProvider } from "@/components/LanguageProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <LastUpdated />
-        {children}
-        <Analytics />
+        <LanguageProvider>
+          <Header />
+          <LastUpdated />
+          {children}
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   );
