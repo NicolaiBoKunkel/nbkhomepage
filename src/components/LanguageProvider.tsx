@@ -1,7 +1,7 @@
 'use client';
 
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import en from '@/i18n/en';
 import da from '@/i18n/da';
 
@@ -25,6 +25,10 @@ function get(obj: any, path: string) {
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useState<Locale>('da');
   const router = useRouter();
+  const pathname = usePathname();
+  const didMount = useRef(false);
+
+  const refreshWhitelist = new Set<string>(['/', '/projects']);
 
   // Load preference on first render
   useEffect(() => {
@@ -37,7 +41,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  // Save preference + update <html lang=""> + sync cookie + refresh server components
+  // Save preference + update <html lang=""> + sync cookie + (maybe) refresh server components
   useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('lang', locale);
@@ -46,19 +50,29 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       // Sync a cookie for server components
       document.cookie = `lang=${locale}; path=/; max-age=${60 * 60 * 24 * 365}`;
 
-      // Force server components to re-render with the new dictionary
-      router.refresh();
+      // Only refresh after first mount AND only on whitelisted routes
+      if (didMount.current) {
+        if (pathname && refreshWhitelist.has(pathname)) {
+          router.refresh();
+        }
+        // else: no refresh needed (e.g., 404 page or purely client pages)
+      } else {
+        didMount.current = true;
+      }
     }
-  }, [locale, router]);
+  }, [locale, router, pathname]);
 
-  const value = useMemo<Ctx>(() => ({
-    locale,
-    setLocale,
-    t: (path: string) => {
-      const result = get(dictionaries[locale], path);
-      return typeof result === 'string' ? result : path;
-    }
-  }), [locale]);
+  const value = useMemo<Ctx>(
+    () => ({
+      locale,
+      setLocale,
+      t: (path: string) => {
+        const result = get(dictionaries[locale], path);
+        return typeof result === 'string' ? result : path;
+      },
+    }),
+    [locale]
+  );
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
