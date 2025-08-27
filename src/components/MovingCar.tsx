@@ -4,6 +4,11 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import car48 from '/public/car48.png';
 
+  /**
+   * 
+   * Handles a user-controlled car on the front page.
+   */
+
 export default function MovingCar() {
   const [x, setX] = useState(200);
   const [y, setY] = useState(200);
