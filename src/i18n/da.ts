@@ -23,9 +23,9 @@ const da = {
     datamatiker:
       "Datamatikeruddannelsen – Zealand - Sjællands Erhvervsakademi i Roskilde (2022–2025)",
     internship:
-      "Datamatiker-praktik som frontend-udvikler hos Velliv, Pension & Livsforsikring (2024)",
+      "Datamatiker-praktik som frontend-udvikler i Velliv, Pension & Livsforsikring (2024)",
     topup:
-      "Professionsbachelor i Softwareudvikling – KEA - Københavns Erhvervsakademi (2025–2026)",
+      "Professionsbachelor i Softwareudvikling – EK - Erhvervsakademi København (2025–2026)",
     grades: "Karakterer:",
     totalECTS: "Samlet ECTS:",
     currentECTS: "Nuværende ECTS:",

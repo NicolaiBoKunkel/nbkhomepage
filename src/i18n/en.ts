@@ -25,7 +25,7 @@ const en = {
     internship:
       "Internship as frontend developer at Velliv, Pension & Livsforsikring (2024)",
     topup:
-      "Bachelor in Software Development – KEA Copenhagen School of Design and Technology (2025–2026)",
+      "Bachelor in Software Development – EK Copenhagen School of Design and Technology (2025–2026)",
     grades: "Grades:",
     totalECTS: "Total ECTS:",
     currentECTS: "Current ECTS:",
