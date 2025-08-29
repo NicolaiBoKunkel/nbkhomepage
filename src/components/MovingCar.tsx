@@ -21,7 +21,10 @@ export default function MovingCar() {
 
   useEffect(() => {
     const updateScreen = () => {
-      setScreen({ width: window.innerWidth, height: window.innerHeight });
+      setScreen({ 
+        width: window.innerWidth, 
+        height: document.documentElement.scrollHeight,
+      });
     };
     updateScreen();
     window.addEventListener('resize', updateScreen);
