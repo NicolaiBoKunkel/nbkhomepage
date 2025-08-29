@@ -4,6 +4,11 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useLanguage } from './LanguageProvider';
 
+  /**
+   * 
+   * Fetches and displays the last updated date of the GitHub repository.
+   */
+
 export default function LastUpdated() {
   const [updatedAt, setUpdatedAt] = useState<string | null>(null);
   const { t, locale } = useLanguage();
