@@ -52,5 +52,21 @@ const da = {
       fullstack: "Full-Stack Web Development",
     },
   },
+    projects: {
+    title: "Udvalgte Projekter",
+    intro:
+      "Denne side bruges til at dele projekter, som jeg har udvalgt for at fremvise mine færdigheder og erfaringer. Projekterne er en blanding af personlige projekter og eksamensprojekter, som både har været implementeret individuelt og i grupper.",
+    clickHint: "Klik på en projekt-titel for at læse mere.",
+    updated: "Opdateret:",
+    language: "Sprog:",
+    liveDemo: "Live demo",
+    noDescription: "Ingen beskrivelse tilgængelig.",
+    screenshots: "Screenshots / Diagrammer",
+    githubTopics: "GitHub Topics:",
+    live: "Live:",
+    github: "GitHub:",
+    noImages: "Ingen billeder tilgængelige.",
+  },
+
 };
 export default da;

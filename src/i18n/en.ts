@@ -52,5 +52,21 @@ const en = {
       fullstack: "Full-Stack Web Development",
     },
   },
+    projects: {
+    title: "Selected Projects",
+    intro:
+      "This page showcases a selection of projects that highlight my skills and experience. The projects are a mix of personal and exam projects, implemented both individually and in groups.",
+    clickHint: "Click a project title to read more.",
+    updated: "Updated:",
+    language: "Language:",
+    liveDemo: "Live demo",
+    noDescription: "No description available.",
+    screenshots: "Screenshots / Diagrams",
+    githubTopics: "GitHub Topics:",
+    live: "Live:",
+    github: "GitHub:",
+    noImages: "No images available.",
+  },
+
 };
 export default en;
