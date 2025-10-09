@@ -14,7 +14,7 @@ export default async function AboutMe() {
       {/* Main content above the car */}
       <div className="relative z-10 px-6 py-12">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-white">
+          <h1 id="who" className="text-4xl font-bold text-gray-800 dark:text-white">
             {t(dict, 'home.who')}
           </h1>
         </header>
@@ -34,18 +34,19 @@ export default async function AboutMe() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">
+              <h2 id="about" className="text-2xl font-semibold text-gray-800 dark:text-white">
                 {t(dict, 'home.about')}
               </h2>
-              <p className="text-gray-700 dark:text-gray-300">
+              <p id="me" className="text-gray-700 dark:text-gray-300">
                 {t(dict, 'home.aboutText')}
               </p>
             </div>
           </section>
 
+
           {/* Education & Experience */}
           <section className="bg-gray-100 dark:bg-gray-800 p-6 rounded-2xl shadow">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white text-center">
+            <h2 id="background" className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white text-center">
               {t(dict, 'home.education')}
             </h2>
             <ul className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -90,7 +91,7 @@ export default async function AboutMe() {
               {/* Technologies */}
               <li>
                 <div className="mt-6">
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                  <h3 id="tech" className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
                     {t(dict, 'home.technologies')}
                   </h3>
                   <p>{t(dict, 'home.techIntro')}</p>
@@ -153,7 +154,7 @@ export default async function AboutMe() {
 
           {/* Contact */}
           <section className="bg-gray-100 dark:bg-gray-800 p-6 rounded-2xl shadow-lg text-center space-y-4">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
+            <h2 id="contact" className="text-2xl font-bold text-gray-800 dark:text-white">
               {t(dict, 'home.contactTitle')}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-base max-w-md mx-auto">

@@ -1,8 +1,30 @@
-describe('Home page', () => {
-  it('renders the correct header text', () => {
-    cy.visit('/')
-    cy.get('header h1')
-      .should('be.visible')
-      .and('contain.text', 'Who am I?')
-  })
-})
+describe('Home Page', () => {
+  it('Renders Danish initially and toggles to English', () => {
+    cy.setCookie('lang', 'da');
+    cy.visit('/', {
+      onBeforeLoad: (win) => {
+        win.localStorage.setItem('lang', 'da');
+      },
+    });
+
+    cy.get('button[aria-label="Toggle language"]').should('contain.text', 'DA');
+    cy.get('h1#who').should('have.text', 'Hvem er jeg?');
+    cy.get('h2#about').should('have.text', 'Om mig');
+    cy.get('p#me').should('have.text', 'Jeg hedder Nicolai Bo Kunkel, er 25 år gammel, nyuddannet datamatiker og læser videre på 2. semester af min overbygningsprofessionsbachelor i softwareudvikling på Erhvervsakademi København.');
+    cy.get('h2#background').should('have.text', 'Uddannelse & Erfaring');
+    cy.get('h3#tech').should('have.text', 'Teknologier & Erfaring');
+    cy.get('h2#contact').should('have.text', 'Lad os komme i kontakt');
+
+
+    //English
+    cy.get('button[aria-label="Toggle language"]').click();
+    cy.get('button[aria-label="Toggle language"]').should('contain.text', 'EN');
+
+    cy.get('h1#who').should('have.text', 'Who am I?');
+    cy.get('h2#about').should('have.text', 'About Me');
+    cy.get('p#me').should('have.text', 'My name is Nicolai Bo Kunkel, I am 25 years old, a newly graduated Computer Science student, and currently studying my top-up Bachelor\'s degree in Software Development at Copenhagen School of Design and Technology.');
+    cy.get('h2#background').should('have.text', 'Education & Experience');
+    cy.get('h3#tech').should('have.text', 'Technologies & Experience');
+    cy.get('h2#contact').should('have.text', 'Let’s get in touch');
+  });
+});
