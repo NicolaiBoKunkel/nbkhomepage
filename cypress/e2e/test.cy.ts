@@ -1,4 +1,4 @@
-describe('Home Page', () => {
+describe('i18n check', () => {
   it('Renders frontpage in danish initially and toggles to english', () => {
     cy.setCookie('lang', 'da');
     cy.visit('/', {
@@ -26,9 +26,7 @@ describe('Home Page', () => {
     cy.get('h3#tech').should('have.text', 'Technologies & Experience');
     cy.get('h2#contact').should('have.text', 'Let’s get in touch');
   });
-});
 
-describe('Project Page', () => {
   it('Renders project page in danish initially and toggles to english', () => {
     cy.setCookie('lang', 'da');
     cy.visit('/', {
@@ -48,3 +46,4 @@ describe('Project Page', () => {
     cy.get('p#info').should('have.text', 'This page showcases a selection of projects that highlight my skills and experience. The projects are a mix of personal and exam projects, implemented both individually and in groups.Click a project title to read more.');
   });
 });
+
