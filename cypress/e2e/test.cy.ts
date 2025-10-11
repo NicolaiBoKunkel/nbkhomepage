@@ -1,5 +1,5 @@
 describe('Home Page', () => {
-  it('Renders Danish initially and toggles to English', () => {
+  it('Renders frontpage in danish initially and toggles to english', () => {
     cy.setCookie('lang', 'da');
     cy.visit('/', {
       onBeforeLoad: (win) => {
@@ -15,7 +15,6 @@ describe('Home Page', () => {
     cy.get('h3#tech').should('have.text', 'Teknologier & Erfaring');
     cy.get('h2#contact').should('have.text', 'Lad os komme i kontakt');
 
-
     //English
     cy.get('button[aria-label="Toggle language"]').click();
     cy.get('button[aria-label="Toggle language"]').should('contain.text', 'EN');
@@ -26,5 +25,26 @@ describe('Home Page', () => {
     cy.get('h2#background').should('have.text', 'Education & Experience');
     cy.get('h3#tech').should('have.text', 'Technologies & Experience');
     cy.get('h2#contact').should('have.text', 'Let’s get in touch');
+  });
+});
+
+describe('Project Page', () => {
+  it('Renders project page in danish initially and toggles to english', () => {
+    cy.setCookie('lang', 'da');
+    cy.visit('/', {
+      onBeforeLoad: (win) => {
+        win.localStorage.setItem('lang', 'da');
+      },
+    });
+    cy.get('div#header1').should('have.text', 'HjemProjekter');
+    cy.get('div#header1').click();
+    cy.get('h1#title').should('have.text', 'Udvalgte Projekter');
+    cy.get('p#info').should('have.text', 'Denne side bruges til at dele projekter, som jeg har udvalgt for at fremvise mine færdigheder og erfaringer. Projekterne er en blanding af personlige projekter og eksamensprojekter, som både har været implementeret individuelt og i grupper.Klik på en projekt-titel for at læse mere.');
+
+    //English
+    cy.get('button[aria-label="Toggle language"]').click();
+    cy.get('button[aria-label="Toggle language"]').should('contain.text', 'EN');
+    cy.get('h1#title').should('have.text', 'Selected Projects');
+    cy.get('p#info').should('have.text', 'This page showcases a selection of projects that highlight my skills and experience. The projects are a mix of personal and exam projects, implemented both individually and in groups.Click a project title to read more.');
   });
 });

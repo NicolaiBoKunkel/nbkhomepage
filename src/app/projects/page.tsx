@@ -25,11 +25,11 @@ export default async function ProjectsPage() {
 
   return (
     <div className="min-h-screen px-6 py-12 bg-white text-gray-800 dark:bg-black dark:text-white">
-      <h1 className="text-3xl font-bold mb-8 text-center">
+      <h1 id="title" className="text-3xl font-bold mb-8 text-center">
         {t(dict, 'projects.title')}
       </h1>
 
-      <p className="text-center mb-6 text-gray-600 dark:text-gray-300">
+      <p id="info" className="text-center mb-6 text-gray-600 dark:text-gray-300">
         {t(dict, 'projects.intro')}
         <br />
         {t(dict, 'projects.clickHint')}
