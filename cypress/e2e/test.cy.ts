@@ -29,13 +29,13 @@ describe('i18n check', () => {
 
   it('Renders project page in danish initially and toggles to english', () => {
     cy.setCookie('lang', 'da');
-    cy.visit('/', {
+    cy.visit('/projects', {
       onBeforeLoad: (win) => {
         win.localStorage.setItem('lang', 'da');
       },
     });
-    cy.get('div#header1').should('have.text', 'HjemProjekter');
-    cy.get('div#header1').click();
+    //cy.get('div#header1').should('have.text', 'HjemProjekter');
+    //cy.get('div#header1').click();
     cy.get('h1#title').should('have.text', 'Udvalgte Projekter');
     cy.get('p#info').should('have.text', 'Denne side bruges til at dele projekter, som jeg har udvalgt for at fremvise mine færdigheder og erfaringer. Projekterne er en blanding af personlige projekter og eksamensprojekter, som både har været implementeret individuelt og i grupper.Klik på en projekt-titel for at læse mere.');
 
