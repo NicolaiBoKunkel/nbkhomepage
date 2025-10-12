@@ -21,9 +21,9 @@ type Repo = {
 export default async function ProjectDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const repos: Repo[] = await fetchGitHubRepos();
   const repo = repos.find((r) => r.name === slug);
