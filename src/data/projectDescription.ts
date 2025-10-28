@@ -22,4 +22,8 @@ export const projectDescriptions: Record<
     short: 'Frontend til et fullstack projekt som benytter data fra TMDB.',
     long: 'Frontend til et fullstack projekt som benytter data fra TMDB. Siden er bygget med Next.js, og hostes på Vercel. Bemærk! Backend går i dvale ved inaktivitet, så siden kan være langsom om at indlæse første gang.',
   },
+  'kanbanBoard': {
+    short: 'Interaktivt kanban board demo.',
+    long: 'Interaktivt kanban board demo. Projectet er bygget med Vue 3, Vite, Vuetify og hostes på Vercel.',
+  },
 };

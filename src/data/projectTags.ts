@@ -4,4 +4,5 @@ export const projectTags: Record<string, string[]> = {
     'nbkhomepage': ['Next.js', 'React', 'TypeScript', 'Vercel', 'Tailwind CSS', 'Cypress', 'CI/CD', 'GitHub API'],
     'nextjs-movie-backend': ['Node.js', 'JavaScript', 'MongoDB', 'JEST', 'Render', 'TMDB API'],
     'nextjs-moviedb': ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel', 'Cypress', 'CI/CD'],
+    'kanbanBoard': ['Vue 3', 'Vite', 'Vitest', 'TypeScript', 'Vercel', 'CI/CD', 'Vuetify'],
 };

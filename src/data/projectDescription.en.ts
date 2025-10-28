@@ -24,4 +24,8 @@ export const projectDescriptions_en: Record<string, { short: string; long: strin
     long:
       'Frontend for a full-stack project that uses TMDB data. The site is built with Next.js and hosted on Vercel. Note: the backend sleeps when idle, so the site may be slow to load the first time.',
   },
+    'kanbanBoard': {
+    short: 'Interactive kanban board demo.',
+    long: 'Interactive kanban board demo. The project is built with Vue 3, Vite, Vuetify and hosted on Vercel.',
+  },
 };
