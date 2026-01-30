@@ -107,8 +107,6 @@ export default async function AboutMe() {
                         <li>Next.js</li>
                         <li>REST API</li>
                         <li>HTML & CSS</li>
-                        <li>Scrum & Agile</li>
-                        <li>Git & GitHub</li>
                         <li>Node.js</li>
                         <li>Express.js</li>
                         <li>Tailwind CSS</li>
@@ -127,6 +125,8 @@ export default async function AboutMe() {
                         <li>PostgreSQL</li>
                         <li>MongoDB</li>
                         <li>Testing (Jest, Cypress & Selenium)</li>
+                        <li>Scrum & Agile</li>
+                        <li>Git & GitHub</li>
                       </ul>
                     </div>
 
