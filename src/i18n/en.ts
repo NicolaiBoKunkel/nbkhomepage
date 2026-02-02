@@ -22,10 +22,11 @@ const en = {
     education: "Education & Experience",
     datamatiker:
       "Computer Science programme – Zealand Academy of Technologies and Business in Roskilde (2022–2025)",
-    internship:
+    dainternship:
       "Internship as frontend developer at Velliv, Pension & Livsforsikring (2024)",
     topup:
       "Bachelor in Software Development – EK Copenhagen School of Design and Technology (2025–2026)",
+    topupInternship: "Internship at Pentia (2026)",
     grades: "Grades:",
     totalECTS: "Total ECTS:",
     currentECTS: "Current ECTS:",

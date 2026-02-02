@@ -54,38 +54,22 @@ export default async function AboutMe() {
               {/* Datamatiker */}
               <li>
                 <p className="font-medium">{t(dict, 'home.datamatiker')}</p>
-                <div className="mt-2 ml-4">
-                  <p className="font-semibold">{t(dict, 'home.grades')}</p>
-                  {/* Keep grade list static since numbers don't need translation */}
-                  <ul className="list-disc list-inside text-sm space-y-1">
-                    <li>14-06-2023 – {t(dict, 'home.exams.firstYear')}: 10, (60 ECTS)</li>
-                    <li>12-01-2024 – {t(dict, 'home.exams.systemDev')}: 7, (10 ECTS)</li>
-                    <li>17-01-2024 – {t(dict, 'home.exams.programming')}: 10, (20 ECTS)</li>
-                    <li>19-06-2024 – {t(dict, 'home.exams.elective')}: 7, (30 ECTS)</li>
-                    <li>07-11-2024 – {t(dict, 'home.exams.internshipExam')}: 12, (15 ECTS)</li>
-                    <li>27-01-2025 – {t(dict, 'home.exams.finalExam')}: 10, (15 ECTS)</li>
-                    <li className="font-medium mt-1">{t(dict, 'home.totalECTS')} 150</li>
-                  </ul>
-                </div>
+
               </li>
 
               {/* Internship */}
               <li>
-                <p className="font-medium">{t(dict, 'home.internship')}</p>
+                <p className="font-medium">{t(dict, 'home.dainternship')}</p>
               </li>
 
               {/* Top-up */}
               <li>
                 <p className="font-medium">{t(dict, 'home.topup')}</p>
-                <div className="mt-2 ml-4">
-                  <p className="font-semibold">{t(dict, 'home.grades')}</p>
-                  <ul className="list-disc list-inside text-sm space-y-1">
-                    <li>04-06-2025 – {t(dict, 'home.exams.sysInt')}: 7, (10 ECTS)</li>
-                    <li>10-06-2025 – {t(dict, 'home.exams.largeSystems')}: 12, (10 ECTS)</li>
-                    <li>19-06-2025 – {t(dict, 'home.exams.fullstack')}: 7, (10 ECTS)</li>
-                    <li className="font-medium mt-1">{t(dict, 'home.currentECTS')} 30</li>
-                  </ul>
-                </div>
+              </li>
+
+              {/* Top-up Internship */}
+              <li>
+                <p className="font-medium">{t(dict, 'home.topupInternship')}</p>
               </li>
 
               {/* Technologies */}

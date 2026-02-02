@@ -22,10 +22,11 @@ const da = {
     education: "Uddannelse & Erfaring",
     datamatiker:
       "Datamatikeruddannelsen – Zealand - Sjællands Erhvervsakademi i Roskilde (2022–2025)",
-    internship:
+    dainternship:
       "Datamatiker-praktik som frontend-udvikler i Velliv, Pension & Livsforsikring (2024)",
     topup:
       "Professionsbachelor i Softwareudvikling – EK - Erhvervsakademi København (2025–2026)",
+    topupInternship: "Praktikant hos Pentia (2026)",
     grades: "Karakterer:",
     totalECTS: "Samlet ECTS:",
     currentECTS: "Nuværende ECTS:",
