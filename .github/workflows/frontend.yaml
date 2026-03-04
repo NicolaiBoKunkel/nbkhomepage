@@ -28,6 +28,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Run unit tests
+        run: npm run test
+
       - name: Cypress (build, start, test)
         uses: cypress-io/github-action@v6
         with:

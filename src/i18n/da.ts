@@ -1,3 +1,5 @@
+import exp from "constants";
+
 const da = {
   nav: {
     home: "Hjem",
@@ -19,28 +21,48 @@ const da = {
     about: "Om mig",
     aboutText:
       "Jeg hedder Nicolai Bo Kunkel, er 25 år gammel, nyuddannet datamatiker og læser videre på 2. semester af min overbygningsprofessionsbachelor i softwareudvikling på Erhvervsakademi København.",
-    education: "Uddannelse & Erfaring",
+
+    educationAndExperience: "Uddannelse & Erfaring",
+    education: "Uddannelser",
+    experience: "Erfaring",
+
+    datamatikerTitle: "Datamatiker",
     datamatiker:
-      "Datamatikeruddannelsen – Zealand - Sjællands Erhvervsakademi i Roskilde (2022–2025)",
+      "Datamatikeruddannelsen med fokus på softwareudvikling, databaser, systemintegration og webteknologier.",
+    datamatikerPeriod: "Zealand – Sjællands Erhvervsakademi (Roskilde) • 2022–2025",
+
+    dainternshipTitle: "Praktik – Frontend-udvikler",
     dainternship:
-      "Datamatiker-praktik som frontend-udvikler i Velliv, Pension & Livsforsikring (2024)",
+      "Frontend-praktik med fokus på moderne webudvikling, UI/UX og samarbejde i et professionelt udviklingsteam.",
+    dainternshipPeriod: "Velliv, Pension & Livsforsikring • 2024",
+
+    topupTitle: "Professionsbachelor – Softwareudvikling (Top-up)",
     topup:
-      "Professionsbachelor i Softwareudvikling – EK - Erhvervsakademi København (2025–2026)",
-    topupInternship: "Praktikant hos Pentia (2026)",
+      "Overbygning med fokus på større systemer, arkitektur, kvalitet, DevOps og moderne full-stack udvikling.",
+    topupPeriod: "Erhvervsakademi København (EK) • 2025–2026",
+
+    topupInternshipTitle: "Praktikant – IT-konsulent / Udvikler",
+    topupInternship:
+      "Praktik i konsulenthus med fokus på kundevendte løsninger, samarbejde, og udvikling i et professionelt miljø.",
+    topupInternshipPeriod: "Pentia • 2026",
+
     grades: "Karakterer:",
     totalECTS: "Samlet ECTS:",
     currentECTS: "Nuværende ECTS:",
+
     technologies: "Teknologier & Erfaring",
     techIntro:
       "Nedenunder har jeg angivet de teknologier og relevante emner, hvor jeg har mest erfaring og kendskab. Listerne vil løbende blive opdateret, i takt med at jeg tilegner mig ny viden og erfaring.",
     most: "📗 Størst erfaring",
     moderate: "📙 Moderat erfaring",
     least: "📘 Begynder",
+
     contactTitle: "Lad os komme i kontakt",
     contactText:
       "Du er altid velkommen til at række ud, hvis du har spørgsmål, projekter eller bare vil netværke.",
     email: "Email",
     linkedin: "LinkedIn",
+
     exams: {
       firstYear: "Førsteårsprøven",
       systemDev: "Systemudviklingsprøven",

@@ -43,97 +43,217 @@ export default async function AboutMe() {
             </div>
           </section>
 
-
           {/* Education & Experience */}
           <section className="bg-gray-100 dark:bg-gray-800 p-6 rounded-2xl shadow">
-            <h2 id="background" className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white text-center">
-              {t(dict, 'home.education')}
+            <h2
+              id="background"
+              className="text-2xl font-semibold mb-6 text-gray-800 dark:text-white text-center"
+            >
+              {t(dict, "home.educationAndExperience")}
             </h2>
-            <ul className="space-y-4 text-gray-700 dark:text-gray-300">
 
-              {/* Datamatiker */}
-              <li>
-                <p className="font-medium">{t(dict, 'home.datamatiker')}</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Education */}
+              <div className="bg-white/70 dark:bg-gray-900/40 rounded-2xl p-5 shadow-sm border border-gray-200/60 dark:border-gray-700/50">
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
+                  {t(dict, "home.education")}
+                </h3>
 
-              </li>
-
-              {/* Internship */}
-              <li>
-                <p className="font-medium">{t(dict, 'home.dainternship')}</p>
-              </li>
-
-              {/* Top-up */}
-              <li>
-                <p className="font-medium">{t(dict, 'home.topup')}</p>
-              </li>
-
-              {/* Top-up Internship */}
-              <li>
-                <p className="font-medium">{t(dict, 'home.topupInternship')}</p>
-              </li>
-
-              {/* Technologies */}
-              <li>
-                <div className="mt-6">
-                  <h3 id="tech" className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                    {t(dict, 'home.technologies')}
-                  </h3>
-                  <p>{t(dict, 'home.techIntro')}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {/* Most */}
-                    <div>
-                      <h4 className="text-md font-semibold text-gray-600 dark:text-gray-400 mb-1">
-                        {t(dict, 'home.most')}
-                      </h4>
-                      <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>JavaScript & TypeScript</li>
-                        <li>React</li>
-                        <li>Next.js</li>
-                        <li>REST API</li>
-                        <li>HTML & CSS</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>Tailwind CSS</li>
-                      </ul>
+                <div className="space-y-4">
+                  {/* Datamatiker (Zealand) */}
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center">
+                      <a
+                        href="https://www.zealand.dk/fuldtid/datamatiker/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Visit Zealand website"
+                        className="group shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center transition transform hover:scale-110 hover:shadow-md cursor-pointer"
+                      >
+                        <Image
+                          src="/images/zealand_logo.jpg"
+                          alt="Zealand"
+                          width={48}
+                          height={48}
+                          className="object-contain w-full h-full transition-opacity group-hover:opacity-90"
+                        />
+                      </a>
                     </div>
 
-                    {/* Moderate */}
-                    <div>
-                      <h4 className="text-md font-semibold text-gray-600 dark:text-gray-400 mb-1">
-                        {t(dict, 'home.moderate')}
-                      </h4>
-                      <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>C# & .NET</li>
-                        <li>GraphQL</li>
-                        <li>DevOps (Docker, CI/CD, GitHub Actions)</li>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                        <li>Testing (Jest, Cypress & Selenium)</li>
-                        <li>Scrum & Agile</li>
-                        <li>Git & GitHub</li>
-                      </ul>
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-800 dark:text-white">
+                        {t(dict, "home.datamatikerTitle")}
+                      </p>
+                      <p className="text-xs text-gray-600 dark:text-gray-300">
+                        {t(dict, "home.datamatikerPeriod")}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Top-up */}
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center">
+                      <a
+                        href="https://www.ek.dk/videregaaende-uddannelser/softwareudvikling"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Visit KEA – Copenhagen School of Design and Technology"
+                        className="group shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center transition transform hover:scale-110 hover:shadow-md cursor-pointer"
+                      >
+                        <Image
+                          src="/images/ek_logo.jpg"
+                          alt="KEA – Copenhagen School of Design and Technology"
+                          width={48}
+                          height={48}
+                          className="object-contain w-full h-full transition-opacity group-hover:opacity-90"
+                        />
+                      </a>
                     </div>
 
-                    {/* Least */}
-                    <div>
-                      <h4 className="text-md font-semibold text-gray-600 dark:text-gray-400 mb-1">
-                        {t(dict, 'home.least')}
-                      </h4>
-                      <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Python</li>
-                        <li>Kubernetes</li>
-                        <li>React Flow</li>
-                        <li>Monitoring & Metrics (Prometheus, Grafana)</li>
-                        <li>Firebase</li>
-                        <li>RabbitMQ</li>
-                        <li>Redis</li>
-                        <li>Microsoft Azure</li>
-                      </ul>
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-800 dark:text-white">
+                        {t(dict, "home.topupTitle")}
+                      </p>
+                      <p className="text-xs text-gray-600 dark:text-gray-300">
+                        {t(dict, "home.topupPeriod")}
+                      </p>
                     </div>
                   </div>
                 </div>
-              </li>
-            </ul>
+              </div>
+
+              {/* Experience / Internships */}
+              <div className="bg-white/70 dark:bg-gray-900/40 rounded-2xl p-5 shadow-sm border border-gray-200/60 dark:border-gray-700/50">
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
+                  {t(dict, "home.experience")}
+                </h3>
+
+                <div className="space-y-4">
+                  {/* Datamatiker Internship (Velliv) */}
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center">
+                      <a
+                        href="https://velliv.dk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Visit Velliv"
+                        className="group shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center transition transform hover:scale-110 hover:shadow-md cursor-pointer"
+                      >
+                        <Image
+                          src="/images/velliv_logo.jpg"
+                          alt="Velliv"
+                          width={48}
+                          height={48}
+                          className="object-contain w-full h-full transition-opacity group-hover:opacity-90"
+                        />
+                      </a>
+                    </div>
+
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-800 dark:text-white">
+                        {t(dict, "home.dainternshipTitle")}
+                      </p>
+                      <p className="text-xs text-gray-600 dark:text-gray-300">
+                        {t(dict, "home.dainternshipPeriod")}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Top-up Internship (Pentia) */}
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center">
+                      <a
+                        href="https://pentia.dk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Visit Pentia"
+                        className="group shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center transition transform hover:scale-110 hover:shadow-md cursor-pointer"
+                      >
+                        <Image
+                          src="/images/pentia_logo.jpg"
+                          alt="Pentia"
+                          width={48}
+                          height={48}
+                          className="object-contain w-full h-full transition-opacity group-hover:opacity-90"
+                        />
+                      </a>
+                    </div>
+
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-800 dark:text-white">
+                        {t(dict, "home.topupInternshipTitle")}
+                      </p>
+                      <p className="text-xs text-gray-600 dark:text-gray-300">
+                        {t(dict, "home.topupInternshipPeriod")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Technologies */}
+            <div className="mt-8">
+              <h3 id="tech" className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                {t(dict, "home.technologies")}
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300">{t(dict, "home.techIntro")}</p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                {/* Most */}
+                <div className="bg-white/70 dark:bg-gray-900/40 rounded-2xl p-4 border border-gray-200/60 dark:border-gray-700/50">
+                  <h4 className="text-md font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                    {t(dict, "home.most")}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                    <li>JavaScript & TypeScript</li>
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>REST API</li>
+                    <li>HTML & CSS</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>Tailwind CSS</li>
+                  </ul>
+                </div>
+
+                {/* Moderate */}
+                <div className="bg-white/70 dark:bg-gray-900/40 rounded-2xl p-4 border border-gray-200/60 dark:border-gray-700/50">
+                  <h4 className="text-md font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                    {t(dict, "home.moderate")}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                    <li>C# & .NET</li>
+                    <li>GraphQL</li>
+                    <li>DevOps (Docker, CI/CD, GitHub Actions)</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                    <li>Testing (Jest, Cypress & Selenium)</li>
+                    <li>Scrum & Agile</li>
+                    <li>Git & GitHub</li>
+                  </ul>
+                </div>
+
+                {/* Least */}
+                <div className="bg-white/70 dark:bg-gray-900/40 rounded-2xl p-4 border border-gray-200/60 dark:border-gray-700/50">
+                  <h4 className="text-md font-semibold text-gray-600 dark:text-gray-400 mb-2">
+                    {t(dict, "home.least")}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                    <li>Python</li>
+                    <li>Kubernetes</li>
+                    <li>React Flow</li>
+                    <li>Monitoring & Metrics (Prometheus, Grafana)</li>
+                    <li>Firebase</li>
+                    <li>RabbitMQ</li>
+                    <li>Redis</li>
+                    <li>Microsoft Azure</li>
+                    <li>Storybook</li>
+                    <li>Azure DevOps</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Contact */}
