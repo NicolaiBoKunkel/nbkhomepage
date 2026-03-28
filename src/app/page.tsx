@@ -249,7 +249,10 @@ export default async function AboutMe() {
                     <li>Redis</li>
                     <li>Microsoft Azure</li>
                     <li>Storybook</li>
+                    <li>Jira</li>
+                    <li>Pattern Lab</li>
                     <li>Azure DevOps</li>
+                    <li>Umbraco</li>
                   </ul>
                 </div>
               </div>
