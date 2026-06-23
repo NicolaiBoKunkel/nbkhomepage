@@ -260,7 +260,7 @@ export default async function AboutMe() {
           </section>
 
           {/* Contact */}
-          <section className="bg-gray-100 dark:bg-gray-800 p-6 rounded-2xl shadow-lg text-center space-y-4">
+          <section className="bg-gray-100 dark:bg-gray-800 p-6 rounded-2xl shadow-lg text-center space-y-4 width-2/3 mx-auto">
             <h2 id="contact" className="text-2xl font-bold text-gray-800 dark:text-white">
               {t(dict, 'home.contactTitle')}
             </h2>

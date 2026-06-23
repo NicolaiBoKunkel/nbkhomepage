@@ -20,7 +20,7 @@ const da = {
     who: "Hvem er jeg?",
     about: "Om mig",
     aboutText:
-      "Jeg hedder Nicolai Bo Kunkel, er 25 år gammel, nyuddannet datamatiker og læser videre på 2. semester af min overbygningsprofessionsbachelor i softwareudvikling på Erhvervsakademi København.",
+      "Jeg hedder Nicolai Bo Kunkel, er 26 år gammel, uddannet datamatiker og fornyeligt færdiguddannet med min overbygningsprofessionsbachelor i softwareudvikling på Erhvervsakademi København.",
 
     educationAndExperience: "Uddannelse & Erfaring",
     education: "Uddannelser",

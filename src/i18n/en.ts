@@ -20,7 +20,7 @@ const en = {
     who: "Who am I?",
     about: "About Me",
     aboutText:
-      "My name is Nicolai Bo Kunkel, I am 25 years old, a newly graduated Computer Science student, and currently studying my top-up Bachelor's degree in Software Development at Copenhagen School of Design and Technology.",
+      "My name is Nicolai Bo Kunkel, I am 26 years old, a graduate of Computer Science, and recently completed my top-up Bachelor's degree in Software Development at Copenhagen School of Design and Technology.",
 
     educationAndExperience: "Education & Experience",
     education: "Education",
