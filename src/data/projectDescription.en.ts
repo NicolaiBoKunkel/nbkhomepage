@@ -14,18 +14,18 @@ export const projectDescriptions_en: Record<string, { short: string; long: strin
     long:
       "This project is my developer portfolio that you're Currently viewing now. The site is built with Next.js and hosted on Vercel.",
   },
-  'nextjs-movie-backend': {
-    short: 'Backend for my full-stack project that uses TMDB data.',
-    long:
-      'Backend for my full-stack project that uses TMDB data. MongoDB stores user data. The backend is built with Node.js and Express, and is hosted on Render.',
-  },
   'nextjs-moviedb': {
     short: 'Frontend for a full-stack project that uses TMDB data.',
     long:
       'Frontend for a full-stack project that uses TMDB data. The site is built with Next.js and hosted on Vercel. Note: the backend sleeps when idle, so the site may be slow to load the first time.',
   },
-    'kanbanBoard': {
+  'kanbanBoard': {
     short: 'Interactive kanban board demo.',
     long: 'Interactive kanban board demo. The project is built with Vue 3, Vite, Vuetify and hosted on Vercel.',
+  },
+  'flow-management-platform': {
+    short: 'Bachelor project for setting up customizable, interactive flowcharts.',
+    long:
+      'Bachelor project for creating customizable, interactive flowcharts. The project is built with Next.js, React Flow, with the frontend hosted on Vercel and backend hosted on railway. It uses both an PostgreSQL and Neo4j database, and allows for real time collaborative editing by multiple users',
   },
 };

@@ -27,24 +27,19 @@ const da = {
     experience: "Erfaring",
 
     datamatikerTitle: "Datamatiker",
-    datamatiker:
-      "Datamatikeruddannelsen med fokus på softwareudvikling, databaser, systemintegration og webteknologier.",
     datamatikerPeriod: "Zealand – Sjællands Erhvervsakademi (Roskilde) • 2022–2025",
 
     dainternshipTitle: "Praktik – Frontend-udvikler",
-    dainternship:
-      "Frontend-praktik med fokus på moderne webudvikling, UI/UX og samarbejde i et professionelt udviklingsteam.",
     dainternshipPeriod: "Velliv, Pension & Livsforsikring • 2024",
 
     topupTitle: "Professionsbachelor – Softwareudvikling (Top-up)",
-    topup:
-      "Overbygning med fokus på større systemer, arkitektur, kvalitet, DevOps og moderne full-stack udvikling.",
     topupPeriod: "Erhvervsakademi København (EK) • 2025–2026",
 
     topupInternshipTitle: "Praktikant – IT-konsulent / Udvikler",
-    topupInternship:
-      "Praktik i konsulenthus med fokus på kundevendte løsninger, samarbejde, og udvikling i et professionelt miljø.",
     topupInternshipPeriod: "Pentia • 2026",
+
+    masterTitle: "Kandidat i Datalogi",
+    masterPeriod: "RUC • 2026–2028",
 
     grades: "Karakterer:",
     totalECTS: "Samlet ECTS:",

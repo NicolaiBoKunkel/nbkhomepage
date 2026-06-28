@@ -119,6 +119,36 @@ export default async function AboutMe() {
                       </p>
                     </div>
                   </div>
+
+                  {/* Masters */}
+                  <div className="flex items-start gap-4">
+                    <div className="shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center">
+                      <a
+                        href="https://ruc.dk/kandidat/computer-science"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Visit RUC – Roskilde University"
+                        className="group shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden flex items-center justify-center transition transform hover:scale-110 hover:shadow-md cursor-pointer"
+                      >
+                        <Image
+                          src="/images/ruc_logo.jpg"
+                          alt="RUC – Roskilde University"
+                          width={48}
+                          height={48}
+                          className="object-contain w-full h-full transition-opacity group-hover:opacity-90"
+                        />
+                      </a>
+                    </div>
+
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-800 dark:text-white">
+                        {t(dict, "home.masterTitle")}
+                      </p>
+                      <p className="text-xs text-gray-600 dark:text-gray-300">
+                        {t(dict, "home.masterPeriod")}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
