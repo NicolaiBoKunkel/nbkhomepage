@@ -39,7 +39,7 @@ const en = {
     topupInternshipPeriod: "Pentia • 2026",
 
     masterTitle: "Master programme in Computer Science",
-    masterPeriod: "RUC • 2026–2028",
+    masterPeriod: "Roskilde University (RUC) • 2026–2028",
 
     grades: "Grades:",
     totalECTS: "Total ECTS:",

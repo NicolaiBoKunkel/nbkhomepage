@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import LastUpdated from "@/components/LastUpdated";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/components/LanguageProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "NBK-Portfolio",
@@ -20,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={spaceGrotesk.className}>
         <LanguageProvider>
           <Header />
           <LastUpdated />

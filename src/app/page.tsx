@@ -261,6 +261,7 @@ export default async function AboutMe() {
                     <li>Testing (Jest, Cypress & Selenium)</li>
                     <li>Scrum & Agile</li>
                     <li>Git & GitHub</li>
+                    <li>Vercel</li>
                   </ul>
                 </div>
 
@@ -283,6 +284,8 @@ export default async function AboutMe() {
                     <li>Pattern Lab</li>
                     <li>Azure DevOps</li>
                     <li>Umbraco</li>
+                    <li>NestJS</li>
+                    <li>Railway</li>
                   </ul>
                 </div>
               </div>

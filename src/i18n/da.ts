@@ -39,7 +39,7 @@ const da = {
     topupInternshipPeriod: "Pentia • 2026",
 
     masterTitle: "Kandidat i Datalogi",
-    masterPeriod: "RUC • 2026–2028",
+    masterPeriod: "Roskilde Universitet (RUC) • 2026–2028",
 
     grades: "Karakterer:",
     totalECTS: "Samlet ECTS:",
